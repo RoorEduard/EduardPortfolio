@@ -1,0 +1,149 @@
+body{
+    background-color:#FFBEAB;
+    color: #201b2b;
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+}
+
+p{
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.ver{
+    height: 85px;
+    display: flex;
+    justify-content: center; 
+    background: rgba(217, 217, 217, 0.6);
+}
+
+.her{
+    transition: 2s;
+}
+
+.her:hover{
+    /* transform: translate(120px,-100px) */
+    transform: rotate(-0.1turn);
+}
+
+.logo, .Top_menu{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.Top_menu li{
+    margin-left: 150px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.Top_menu a{
+    font-family: 'Open Sans', sans-serif;;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.Top_menu a:hover{
+    color: #F68D1F;
+}
+
+.mail{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.mail h1{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 56px;
+}
+
+.form input{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    width: 699px;
+    height: 74px;
+    left: calc(50% - 699px/2 - 26.5px);
+    top: calc(50% - 74px/2 - 174px);
+   border: 0px;
+   background: #FDFFFE;
+   border-radius: 15px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #FDFFFE;
+}
+
+.btn-form{
+    text-decoration: none;
+    padding: 15px 30px;
+width: 517px;
+height: 80px;
+border: 0px;
+background: #80BD9E;
+margin-bottom: 80px;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 38px;
+color: #FFFFFF;
+}
+
+
+.footer{
+    margin-top: 50px;
+    height: 90px; 
+    background: rgba(217, 217, 217, 0.6);
+
+}
+
+.the{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+
+.plane{
+    margin-right: 200px;
+}
+
+.name{
+    margin-right: 100px;
+}
+
+.agreement{
+    margin-right: 100px;
+}
+
+.soq{
+    margin-right: 100px;
+}
+
+.insta{
+    margin-right: 10px;
+}
+
+.tiktok{
+    margin-right: 10px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация на тура</title>
+    <link rel="shortcut icon" href="img/image 25.png">
+    <link rel="stylesheet" href="css/style .css">
+</head>
+<body>
+    <header class="ver">
+        <div class="container">
+            <div class="All_header_menu">
+                <div class="logo">
+                <img src="img/image 25.png" alt="logo" class="her">
+            </div>
+            <div class="Top_menu">
+                <ul>
+                    <li class="grafig"><a href="#">Пн - Пт: 09:00 - 21:00</a></li>
+                    <li class="maps"><a href="#">АДРЕС: <br> г.Алматы </a></li>
+                    <li class="phone">  <a href="#"> ПОЗВОНИТЕ НАМ: <br> (+7) 707 131 37 55</a></li>
+                </ul>
+            </div>
+        </div>
+    </header> 
+
+    <section id="mail" class="mail">
+        <div class="container">
+            <h1>Регистрация на тур</h1>
+            <form action="#" class="form">
+                <input type="name" placeholder="Имя" name="name" class="name" id="name"
+                required>
+                <input type="phone" placeholder="+7(___)___ __ __" name="phone" class="phone" id="phone"
+                required>
+                <input type="city" placeholder="Город" name="city" class="city"  id="city"
+                required>
+                <input type="email" placeholder="Email" name="email" class="email" id="email"
+                required>
+                <button onclick="send()" id="btn-form"class="btn-form"><a href="C:\class\web\sat\1str\index.html">Забронировать</a></button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="the">
+            <div>
+                <img src="img/image 25.png" alt="" class="plane">
+            </div>
+                <p class="name">© Э_R_A</p>
+                <p class="agreement">Cоглашение на обработку ПД</p>
+            <div class="soq">
+                <img src="img/image 27.png" alt="" class="insta">
+                <img src="img/image 28.png" alt="" class="tiktok">
+                <img src="img/image 29.png" alt="" class="vk">
+            </div>
+        </div>
+        </footer>  
+        <script>
+            const rewName = document.querySelector('#name');
+            const rewPhone =document.querySelector('#phone');
+            const rewCity =document.querySelector('#city');
+            const rewEmail = document.querySelector('#email');
+            const rewText = document.querySelector('#btn-form');
+  
+            function send(){
+                let telegramBotToken = "6034445065:AAFI4JzBS6Ip-1mO5ZMy5_pncEp0HNfTZys";
+                let chat_id = "@1019153108";
+  
+                let xhr = new XMLHttpRequest();
+                xhr.open("POST", "https://api.telegram.org/bot"+telegramBotToken+"/sendMessage?chat_id=-875960640&text="+rewName.value.trim()+" "+rewPhone.value.trim()+" "+rewCity.value.trim()+" "+rewEmail.value.trim()+" "+rewText.value.trim());
+  
+                xhr.setRequestHeader("Accept", "application/json");
+                xhr.setRequestHeader("Content-Type", "application/json");
+  
+                xhr.onload = () => console.log(xhr.responseText);
+  
+                let data = `{
+                  "chat_id": ${chat_id},
+                  "text": "*⭐️ Новое сообщение!*\n*👤 ФИО:* \_${rewName.value.trim()}\_\n*📧 Email:* \` \_${rewPhone.value.trim()}\_\n*+7* \`  \_${rewCity.value.trim()}\_\n*Место* \` ${rewEmail.value.trim()}\n\`*✉️ Сообщение:*\n\`${rewText.value.trim()}\`",
+                  "parse_mode": "Markdown",
+                }`;
+  
+                rewName.value="";
+                rewPhone.value="";
+                rewCity.value="";
+                rewEmail.value="";
+                rewText.value="";
+                xhr.send(data);
+                alert("Спасибо за ваш отзыв!");
+                
+            }
+          </script>
+    </body>
+    </html>
